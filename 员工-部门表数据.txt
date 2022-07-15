@@ -1,0 +1,26 @@
+-- 创建部门表(id,dep_name,dep_location)
+CREATE TABLE department(
+id INT PRIMARY KEY AUTO_INCREMENT,
+dep_name VARCHAR(20),
+dep_location VARCHAR(20)
+);
+
+-- 添加 2 个部门
+INSERT INTO department VALUES(NULL, '研发部','广州'),(NULL, '销售部', '深圳');
+
+
+-- 创建员工表(id,name,age,dep_id)
+CREATE TABLE employee(
+id INT PRIMARY KEY AUTO_INCREMENT,
+NAME VARCHAR(20),
+age INT,
+dep_id INT
+);
+
+-- 添加员工,dep_id 表示员工所在的部门
+INSERT INTO employee (NAME, age, dep_id) VALUES ('张三', 20, 1);
+INSERT INTO employee (NAME, age, dep_id) VALUES ('李四', 21, 1);
+INSERT INTO employee (NAME, age, dep_id) VALUES ('王五', 20, 1);
+INSERT INTO employee (NAME, age, dep_id) VALUES ('老王', 20, 2);
+INSERT INTO employee (NAME, age, dep_id) VALUES ('大王', 22, 2);
+INSERT INTO employee (NAME, age, dep_id) VALUES ('小王', 18, 2);
